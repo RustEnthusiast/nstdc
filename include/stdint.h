@@ -6,11 +6,7 @@ typedef signed char int_least8_t;
 /// Smallest signed integer type with width of at least 16 bits.
 typedef signed short int_least16_t;
 /// Smallest signed integer type with width of at least 32 bits.
-#if defined(__WINDOWS__)\
-    || defined(_WIN32)\
-    || defined(_WIN64)\
-    || defined(__WIN32__)\
-    || defined(__TOS_WIN__)
+#ifdef _WIN16
 typedef signed long int_least32_t;
 #else
 typedef signed int int_least32_t;
@@ -23,11 +19,7 @@ typedef unsigned char uint_least8_t;
 /// Smallest unsigned integer type with width of at least 16 bits.
 typedef unsigned short uint_least16_t;
 /// Smallest unsigned integer type with width of at least 32 bits.
-#if defined(__WINDOWS__)\
-    || defined(_WIN32)\
-    || defined(_WIN64)\
-    || defined(__WIN32__)\
-    || defined(__TOS_WIN__)
+#ifdef _WIN16
 typedef unsigned long uint_least32_t;
 #else
 typedef unsigned int uint_least32_t;
